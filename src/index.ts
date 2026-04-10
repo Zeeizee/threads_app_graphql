@@ -27,6 +27,9 @@ const initServer = async () => {
   app.get("/", (req, res) => {
     res.send("i am working");
   });
+  app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
   app.listen(PORT, () => {
     console.log(`servers is running at ${PORT}`);
   });
